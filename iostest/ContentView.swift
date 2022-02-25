@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var currentTab: Tab = .Home
+    @State var currentTab: Tab = .Discover
   
     
     init () {
