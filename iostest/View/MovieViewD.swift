@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MovieViewD: View {
     var body: some View {
+        
+        ScrollView(.vertical, showsIndicators: false, content: {
         VStack{
             ZStack {
                 Color("search")
@@ -20,7 +22,7 @@ struct MovieViewD: View {
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                         .edgesIgnoringSafeArea(.top)
-                
+                   
                     VStack {
                         Text("Captain Marvel")
                             .font(.title)
@@ -45,7 +47,7 @@ struct MovieViewD: View {
                             Text("4.5")
                                 .font(.title2)
                                 .foregroundColor(Color.yellow)
-                            //Spacer()
+                           
                           
                         }
                         
@@ -61,12 +63,28 @@ struct MovieViewD: View {
                             Text("Cast")
                                 .fontWeight(.bold)
                                 .foregroundColor(.gray)
-                            
-                                .font(.system(size: 20))
-                            
+                                .padding(.horizontal,30)
+                                .font(.system(size: 24))
+                            Image("cast")
+                                .padding(.horizontal, 30)
                         }
-                        Image("Ellipse 58")
+                        
+                       
                         Spacer()
+                       
+                      
+                    }
+                    
+                    HStack(spacing: 10){
+                        Image("detail")
+//                            .resizable()
+//                              .frame(width: 20, height: 20)
+//                              .foregroundColor(.white)
+//                              .padding(25)
+//                              .background(Color.gray)
+//                              .clipShape(Circle())
+//                              RoundedButton().padding(.bottom,20)
+//                            .padding(.top,10)
                        
                     }
                    
@@ -76,44 +94,35 @@ struct MovieViewD: View {
         }
     
         
-//        ScrollView(.vertical, showsIndicators: false, content: {
-//            LazyVStack (spacing: 15, pinnedViews: [.sectionFooters],content:{
-//
-//                HStack{
-//
-//                    Button(action: {}, label:  {
-//                        Image(systemName: "chevron.left")
-//                            .font(.title2)
-//                            .foregroundColor(.white)
-//                    })
-//
-//                    Spacer()
-//                    Button(action: {}, label:  {
-//                        Image(systemName: "bookmark")
-//                            .font(.title2)
-//                            .foregroundColor(.white)
-//                    })
-//                }
-//                ZStack{
-//                    Image("image 96")
-//                        .resizable()
-//                        .aspectRatio( contentMode: .fit)
-//
-//                        Text("Captain Marvel")
-//                        .fontWeight(.bold)
-//                        .foregroundColor(Color.white)
-//                        .font(.system(size: 20))
-//                        .padding(.vertical,240)
-//                }
-//                .padding(.top)
-//            })
-//        })
-        ///    .background(Color("search"))
+
+        })
     }
 }
 
 struct MovieViewD_Previews: PreviewProvider {
     static var previews: some View {
         MovieViewD()
+    }
+}
+struct RoundedButton1 : View {
+    var body: some View {
+        Button(action: {}) {
+            HStack {
+                Spacer()
+                Text("Watch Now")
+             //.frame(Width: 10, Width:10)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+//                    .padding(15)
+//                    .background(Color.orange)
+//                           .foregroundColor(.black)
+             // .color(Color.white)
+                Spacer()
+            }
+        }
+        .padding(.vertical,30)
+        .foregroundColor(.white)
+        .background(Color.red)
+        .cornerRadius(15.33)
     }
 }

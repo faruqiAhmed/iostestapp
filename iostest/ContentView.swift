@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var currentTab: Tab = .Discover
+    @State var currentTab: Tab = .Home
   
     
     init () {
@@ -27,7 +27,7 @@ struct ContentView: View {
                                        .background(
                                         Color("search")
                                        )
-                    Text("Home")
+                    MovieViewD()
                         .tag(Tab.Union)
                     Text("Home")
                         .tag(Tab.User)
@@ -54,7 +54,7 @@ struct ContentView: View {
                 .padding(.bottom,20 )
             }
             .background(Color("search")
-                                       .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y: -5)
+                                       .shadow(color: Color.black.opacity(0.04), radius: 5, x: -5, y:-5)
                                        .ignoresSafeArea(.container, edges: .bottom)
                        )
        

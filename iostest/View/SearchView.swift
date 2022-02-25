@@ -205,44 +205,7 @@ struct SearchView: View {
                 
             }
             
-//            HStack() {
-//
-//                Image("the-captain")
-//                    .resizable()
-//
-//                    .frame(height:180)
-//                    .frame(width: 100)
-//                    .cornerRadius(10)
-//                    .padding(.vertical,13)
-//                    .foregroundColor(Color.gray)
-//                    .padding(.horizontal,15)
-//                VStack( alignment: .leading, spacing: 6){
-//                    Text("Captain America")
-//                        .foregroundColor(Color.white)
-//                        .fontWeight(.medium)
-//                    Text("2017 | Fantasy, Action")
-//                        .foregroundColor(Color.white)
-//                        .padding(.vertical,1)
-//                    HStack() {
-//
-//                        Image(systemName: "star")
-//                            .font(.title2)
-//                            .foregroundColor(Color.yellow)
-//                        TextField("", text: .constant("46"))
-//                            .foregroundColor(Color.white)
-//                            .disabled(true)
-//                    }
-//
-//                }
-//
-//                HStack{
-//                    Image("Vector1")
-//                        .padding(.horizontal,35)
-//                }
-//
-//                .padding(.vertical,20)
-//
-//            }
+
         }
         .background(Color("search"))
         
